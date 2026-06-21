@@ -20,7 +20,7 @@ const LawyerDashboard = () => {
 
     // Lawyer ki apni info lawyers.json se dhundo
     // Email se match karke
-    const lawyerInfo = lawyersData.find((l) => l.id === user?.lawyerId);
+    const lawyerInfo = lawyersData.find((lawyer) => lawyer.email === user?.lawyerId);
 
     // localStorage se saari appointments lo
     // phir sirf is lawyer ki appointments filter karo
