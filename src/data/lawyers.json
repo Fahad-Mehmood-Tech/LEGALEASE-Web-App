@@ -1,0 +1,517 @@
+[
+    {
+        "id": 1,
+        "name": "Barrister Ahmed Raza",
+        "image": "https://randomuser.me/api/portraits/men/32.jpg",
+        "specialization": "Criminal Law",
+        "experience": 12,
+        "rating": 4.9,
+        "reviews": 124,
+        "location": "Lahore",
+        "fee": 5000,
+        "languages": [
+            "Urdu",
+            "English",
+            "Punjabi"
+        ],
+        "description": "Experienced criminal defense lawyer with over 12 years of practice in high-profile cases across Pakistan.",
+        "biography": "Barrister Ahmed Raza is a highly experienced criminal defense attorney who has successfully handled over 500 cases. He completed his Bar from Lincoln's Inn, London and returned to Pakistan to serve justice.",
+        "qualifications": [
+            "LLB - University of Punjab",
+            "Bar-at-Law - Lincoln's Inn London",
+            "LLM - Cambridge University"
+        ],
+        "practiceAreas": [
+            "Criminal Defense",
+            "White Collar Crime",
+            "Bail Applications",
+            "Appeals"
+        ],
+        "officeAddress": "12-A, Gulberg III, Lahore",
+        "availability": {
+            "monday": [
+                "10:00 AM",
+                "11:00 AM",
+                "2:00 PM",
+                "3:00 PM"
+            ],
+            "tuesday": [
+                "10:00 AM",
+                "11:00 AM",
+                "2:00 PM"
+            ],
+            "wednesday": [
+                "11:00 AM",
+                "12:00 PM",
+                "3:00 PM"
+            ],
+            "thursday": [
+                "10:00 AM",
+                "2:00 PM",
+                "4:00 PM"
+            ],
+            "friday": [
+                "10:00 AM",
+                "11:00 AM"
+            ],
+            "saturday": [],
+            "sunday": []
+        },
+        "reviews_list": [
+            {
+                "name": "Usman Ali",
+                "rating": 5,
+                "comment": "Excellent lawyer, won my case brilliantly!",
+                "date": "2024-03-15"
+            },
+            {
+                "name": "Sara Khan",
+                "rating": 5,
+                "comment": "Very professional and knowledgeable.",
+                "date": "2024-02-20"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Advocate Fatima Malik",
+        "image": "https://randomuser.me/api/portraits/women/44.jpg",
+        "specialization": "Family Law",
+        "experience": 8,
+        "rating": 4.8,
+        "reviews": 98,
+        "location": "Karachi",
+        "fee": 4000,
+        "languages": [
+            "Urdu",
+            "English",
+            "Sindhi"
+        ],
+        "description": "Compassionate family law specialist helping clients navigate divorce, custody, and inheritance matters.",
+        "biography": "Advocate Fatima Malik has dedicated her career to family law, helping hundreds of families resolve disputes with dignity and care.",
+        "qualifications": [
+            "LLB - University of Karachi",
+            "LLM - Family Law Specialization"
+        ],
+        "practiceAreas": [
+            "Divorce",
+            "Child Custody",
+            "Inheritance",
+            "Maintenance"
+        ],
+        "officeAddress": "Office 5, Clifton Block 2, Karachi",
+        "availability": {
+            "monday": [
+                "9:00 AM",
+                "10:00 AM",
+                "3:00 PM"
+            ],
+            "tuesday": [
+                "9:00 AM",
+                "11:00 AM",
+                "2:00 PM"
+            ],
+            "wednesday": [
+                "10:00 AM",
+                "3:00 PM"
+            ],
+            "thursday": [
+                "9:00 AM",
+                "11:00 AM"
+            ],
+            "friday": [
+                "9:00 AM",
+                "10:00 AM"
+            ],
+            "saturday": [
+                "10:00 AM",
+                "11:00 AM"
+            ],
+            "sunday": []
+        },
+        "reviews_list": [
+            {
+                "name": "Nadia Hussain",
+                "rating": 5,
+                "comment": "She handled my divorce case with great sensitivity.",
+                "date": "2024-04-01"
+            },
+            {
+                "name": "Tariq Mehmood",
+                "rating": 4,
+                "comment": "Very helpful and professional.",
+                "date": "2024-03-10"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Barrister Zain ul Abideen",
+        "image": "https://randomuser.me/api/portraits/men/45.jpg",
+        "specialization": "Corporate Law",
+        "experience": 15,
+        "rating": 4.7,
+        "reviews": 87,
+        "location": "Islamabad",
+        "fee": 8000,
+        "languages": [
+            "Urdu",
+            "English"
+        ],
+        "description": "Top corporate lawyer specializing in mergers, acquisitions, and business contracts for multinational firms.",
+        "biography": "Barrister Zain has represented Fortune 500 companies and local conglomerates in complex corporate transactions over 15 years.",
+        "qualifications": [
+            "LLB - LUMS",
+            "LLM - Harvard Law School"
+        ],
+        "practiceAreas": [
+            "Mergers & Acquisitions",
+            "Contract Law",
+            "Corporate Governance",
+            "Regulatory Compliance"
+        ],
+        "officeAddress": "Blue Area, F-7, Islamabad",
+        "availability": {
+            "monday": [
+                "11:00 AM",
+                "2:00 PM",
+                "4:00 PM"
+            ],
+            "tuesday": [
+                "10:00 AM",
+                "3:00 PM"
+            ],
+            "wednesday": [
+                "11:00 AM",
+                "2:00 PM"
+            ],
+            "thursday": [
+                "10:00 AM",
+                "11:00 AM",
+                "3:00 PM"
+            ],
+            "friday": [
+                "11:00 AM"
+            ],
+            "saturday": [],
+            "sunday": []
+        },
+        "reviews_list": [
+            {
+                "name": "Kamran Sheikh",
+                "rating": 5,
+                "comment": "Best corporate lawyer in Islamabad!",
+                "date": "2024-01-15"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Advocate Sana Tariq",
+        "image": "https://randomuser.me/api/portraits/women/68.jpg",
+        "specialization": "Property Law",
+        "experience": 6,
+        "rating": 4.6,
+        "reviews": 63,
+        "location": "Lahore",
+        "fee": 3500,
+        "languages": [
+            "Urdu",
+            "English",
+            "Punjabi"
+        ],
+        "description": "Property law expert dealing in real estate transactions, disputes, and land record matters.",
+        "biography": "Advocate Sana Tariq has helped over 200 clients secure their property rights across Punjab.",
+        "qualifications": [
+            "LLB - University of Punjab",
+            "Diploma in Property Law"
+        ],
+        "practiceAreas": [
+            "Real Estate",
+            "Land Disputes",
+            "Property Transactions",
+            "Housing Societies"
+        ],
+        "officeAddress": "Johar Town, Lahore",
+        "availability": {
+            "monday": [
+                "10:00 AM",
+                "2:00 PM"
+            ],
+            "tuesday": [
+                "11:00 AM",
+                "3:00 PM"
+            ],
+            "wednesday": [
+                "10:00 AM",
+                "2:00 PM"
+            ],
+            "thursday": [
+                "11:00 AM",
+                "3:00 PM"
+            ],
+            "friday": [
+                "10:00 AM"
+            ],
+            "saturday": [
+                "11:00 AM",
+                "12:00 PM"
+            ],
+            "sunday": []
+        },
+        "reviews_list": [
+            {
+                "name": "Asif Jameel",
+                "rating": 5,
+                "comment": "Resolved my property dispute quickly.",
+                "date": "2024-02-28"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Barrister Omar Farooq",
+        "image": "https://randomuser.me/api/portraits/men/71.jpg",
+        "specialization": "Tax Law",
+        "experience": 10,
+        "rating": 4.5,
+        "reviews": 55,
+        "location": "Karachi",
+        "fee": 6000,
+        "languages": [
+            "Urdu",
+            "English"
+        ],
+        "description": "Tax law specialist with expertise in FBR matters, tax planning, and corporate taxation.",
+        "biography": "Barrister Omar Farooq has saved clients millions in taxes through expert legal counsel and FBR representation.",
+        "qualifications": [
+            "LLB - IBA Karachi",
+            "LLM - Tax Law"
+        ],
+        "practiceAreas": [
+            "Income Tax",
+            "Sales Tax",
+            "FBR Appeals",
+            "Corporate Taxation"
+        ],
+        "officeAddress": "PECHS Block 6, Karachi",
+        "availability": {
+            "monday": [
+                "9:00 AM",
+                "11:00 AM",
+                "3:00 PM"
+            ],
+            "tuesday": [
+                "10:00 AM",
+                "2:00 PM"
+            ],
+            "wednesday": [
+                "9:00 AM",
+                "3:00 PM"
+            ],
+            "thursday": [
+                "10:00 AM",
+                "2:00 PM"
+            ],
+            "friday": [
+                "9:00 AM",
+                "11:00 AM"
+            ],
+            "saturday": [],
+            "sunday": []
+        },
+        "reviews_list": [
+            {
+                "name": "Bilal Ahmed",
+                "rating": 4,
+                "comment": "Great tax advice, saved a lot of money.",
+                "date": "2024-03-20"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Advocate Maryam Nawaz",
+        "image": "https://randomuser.me/api/portraits/women/26.jpg",
+        "specialization": "Immigration Law",
+        "experience": 7,
+        "rating": 4.8,
+        "reviews": 91,
+        "location": "Islamabad",
+        "fee": 4500,
+        "languages": [
+            "Urdu",
+            "English",
+            "Arabic"
+        ],
+        "description": "Immigration law expert helping clients with visas, work permits, and citizenship applications.",
+        "biography": "Advocate Maryam has successfully processed over 300 immigration cases for clients moving to UK, Canada, and USA.",
+        "qualifications": [
+            "LLB - Quaid-e-Azam University",
+            "Certified Immigration Consultant"
+        ],
+        "practiceAreas": [
+            "Visa Applications",
+            "Work Permits",
+            "Citizenship",
+            "Deportation Defense"
+        ],
+        "officeAddress": "F-10 Markaz, Islamabad",
+        "availability": {
+            "monday": [
+                "10:00 AM",
+                "2:00 PM",
+                "4:00 PM"
+            ],
+            "tuesday": [
+                "9:00 AM",
+                "11:00 AM"
+            ],
+            "wednesday": [
+                "10:00 AM",
+                "3:00 PM"
+            ],
+            "thursday": [
+                "9:00 AM",
+                "2:00 PM"
+            ],
+            "friday": [
+                "10:00 AM",
+                "11:00 AM"
+            ],
+            "saturday": [
+                "10:00 AM"
+            ],
+            "sunday": []
+        },
+        "reviews_list": [
+            {
+                "name": "Hira Baig",
+                "rating": 5,
+                "comment": "Got my UK visa approved thanks to her!",
+                "date": "2024-04-10"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Barrister Hassan Iqbal",
+        "image": "https://randomuser.me/api/portraits/men/83.jpg",
+        "specialization": "Civil Law",
+        "experience": 9,
+        "rating": 4.4,
+        "reviews": 47,
+        "location": "Rawalpindi",
+        "fee": 3000,
+        "languages": [
+            "Urdu",
+            "English",
+            "Punjabi"
+        ],
+        "description": "Civil litigation expert handling personal injury, contract disputes, and civil appeals.",
+        "biography": "Barrister Hassan Iqbal has practiced civil law for 9 years with a strong track record in district and high courts.",
+        "qualifications": [
+            "LLB - Gordon College Rawalpindi",
+            "LLM - Civil Litigation"
+        ],
+        "practiceAreas": [
+            "Civil Disputes",
+            "Contract Breaches",
+            "Personal Injury",
+            "Civil Appeals"
+        ],
+        "officeAddress": "Saddar, Rawalpindi",
+        "availability": {
+            "monday": [
+                "10:00 AM",
+                "3:00 PM"
+            ],
+            "tuesday": [
+                "11:00 AM",
+                "2:00 PM"
+            ],
+            "wednesday": [
+                "10:00 AM"
+            ],
+            "thursday": [
+                "11:00 AM",
+                "3:00 PM"
+            ],
+            "friday": [
+                "10:00 AM",
+                "2:00 PM"
+            ],
+            "saturday": [
+                "11:00 AM"
+            ],
+            "sunday": []
+        },
+        "reviews_list": [
+            {
+                "name": "Rashid Mehmood",
+                "rating": 4,
+                "comment": "Good lawyer, handled my case professionally.",
+                "date": "2024-01-30"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Advocate Zara Ahmed",
+        "image": "https://randomuser.me/api/portraits/women/55.jpg",
+        "specialization": "Intellectual Property",
+        "experience": 5,
+        "rating": 4.6,
+        "reviews": 38,
+        "location": "Lahore",
+        "fee": 5500,
+        "languages": [
+            "Urdu",
+            "English"
+        ],
+        "description": "IP law specialist protecting trademarks, copyrights, and patents for businesses and creators.",
+        "biography": "Advocate Zara Ahmed is one of Pakistan's youngest and brightest IP lawyers, protecting creative rights across industries.",
+        "qualifications": [
+            "LLB - LUMS",
+            "LLM - Intellectual Property Law"
+        ],
+        "practiceAreas": [
+            "Trademarks",
+            "Copyrights",
+            "Patents",
+            "Trade Secrets"
+        ],
+        "officeAddress": "DHA Phase 5, Lahore",
+        "availability": {
+            "monday": [
+                "11:00 AM",
+                "3:00 PM"
+            ],
+            "tuesday": [
+                "10:00 AM",
+                "2:00 PM"
+            ],
+            "wednesday": [
+                "11:00 AM",
+                "4:00 PM"
+            ],
+            "thursday": [
+                "10:00 AM",
+                "3:00 PM"
+            ],
+            "friday": [
+                "11:00 AM"
+            ],
+            "saturday": [],
+            "sunday": []
+        },
+        "reviews_list": [
+            {
+                "name": "Imran Butt",
+                "rating": 5,
+                "comment": "Registered my trademark successfully!",
+                "date": "2024-03-05"
+            }
+        ]
+    }
+]

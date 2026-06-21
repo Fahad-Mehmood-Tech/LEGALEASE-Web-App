@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "role": "client",
+        "name": "Ali Hassan",
+        "email": "ali@email.com",
+        "phone": "0300-1234567",
+        "password": "test123",
+        "avatar": "https://randomuser.me/api/portraits/men/10.jpg"
+    },
+    {
+        "id": 2,
+        "role": "client",
+        "name": "Sara Malik",
+        "email": "sara@email.com",
+        "phone": "0321-9876543",
+        "password": "test123",
+        "avatar": "https://randomuser.me/api/portraits/women/10.jpg"
+    },
+    {
+        "id": 3,
+        "role": "lawyer",
+        "name": "Barrister Ahmed Raza",
+        "email": "ahmed@legalease.com",
+        "phone": "0300-9999999",
+        "password": "lawyer123",
+        "lawyerId": 1,
+        "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+    }
+]
