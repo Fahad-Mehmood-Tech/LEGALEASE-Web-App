@@ -10,13 +10,17 @@ import {
     FaArrowRight,
 } from "react-icons/fa";
 import Navbar from "../components/Navbar";
-import { getUser } from "../utils/localStorage";
+import { getUser, getAppointments } from "../utils/localStorage";
 import lawyersData from "../data/lawyers.json";
 
 const ClientDashboard = () => {
     const navigate = useNavigate();
     const user = getUser();
 
+    const allAppointments = getAppointments();
+    const myAppointments = allAppointments.filter(
+        (apt) => apt.clientEmail === user?.email
+    );
     // Top 3 lawyers featured
     const featuredLawyers = lawyersData.slice(0, 3);
 
@@ -30,7 +34,7 @@ const ClientDashboard = () => {
         },
         {
             label: "My Appointments",
-            value: 0,
+            value: myAppointments.length,
             icon: <FaCalendarCheck className="text-green-600 text-2xl" />,
             bg: "bg-green-50",
         },

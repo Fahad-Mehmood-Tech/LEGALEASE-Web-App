@@ -1,13 +1,10 @@
 // src/client/Profile.jsx
-// Client can view and update their account details
-// Data saved to localStorage via saveCurrentUser()
 
 import { useState, useEffect } from "react";
-import { getCurrentUser, saveCurrentUser } from "../utils/localStorage";
+import { getUser, saveUser } from "../utils/localStorage";
 import { FaUserCircle, FaSave } from "react-icons/fa";
 
-// ── Field component defined OUTSIDE parent ─────────────────────────
-// Never define components inside other components — it breaks input focus
+// Field component — OUTSIDE parent component
 function Field({ label, name, value, onChange, type = "text", placeholder = "" }) {
     return (
         <div>
@@ -25,6 +22,7 @@ function Field({ label, name, value, onChange, type = "text", placeholder = "" }
 }
 
 export default function ClientProfile() {
+
     const [profile, setProfile] = useState({
         name: "",
         email: "",
@@ -32,14 +30,15 @@ export default function ClientProfile() {
         city: "",
         cnic: "",
     });
+
     const [saved, setSaved] = useState(false);
     const [pwForm, setPwForm] = useState({ current: "", newPw: "", confirm: "" });
     const [pwError, setPwError] = useState("");
     const [pwSuccess, setPwSuccess] = useState(false);
 
-    // ── Load user on mount ─────────────────────────────────────────
+    // Page khulte hi user ka data load karo
     useEffect(() => {
-        const user = getCurrentUser();
+        const user = getUser(); // ✅ sahi function
         if (user) {
             setProfile({
                 name: user.name || "",
@@ -51,24 +50,25 @@ export default function ClientProfile() {
         }
     }, []);
 
-    // ── Profile field change ───────────────────────────────────────
+    // Profile fields change handler
     function handleChange(e) {
         setProfile({ ...profile, [e.target.name]: e.target.value });
         setSaved(false);
     }
 
-    // ── Save profile ───────────────────────────────────────────────
+    // Profile save karo
     function handleSave() {
-        const existing = getCurrentUser();
-        saveCurrentUser({ ...existing, ...profile });
+        const existing = getUser(); // ✅ sahi function
+        saveUser({ ...existing, ...profile }); // ✅ sahi function
         setSaved(true);
     }
 
-    // ── Password change ────────────────────────────────────────────
+    // Password change karo
     function handlePasswordChange() {
         setPwError("");
         setPwSuccess(false);
 
+        // Validation
         if (!pwForm.current || !pwForm.newPw || !pwForm.confirm) {
             setPwError("Please fill all password fields.");
             return;
@@ -82,10 +82,8 @@ export default function ClientProfile() {
             return;
         }
 
-        // In a real app we'd verify the current password against the backend.
-        // Here we just save the new one to localStorage.
-        const existing = getCurrentUser();
-        saveCurrentUser({ ...existing, password: pwForm.newPw });
+        const existing = getUser(); // ✅ sahi function
+        saveUser({ ...existing, password: pwForm.newPw }); // ✅ sahi function
         setPwSuccess(true);
         setPwForm({ current: "", newPw: "", confirm: "" });
     }
@@ -94,7 +92,7 @@ export default function ClientProfile() {
         <div className="min-h-screen bg-[#F8FAFC] p-6">
             <div className="max-w-2xl mx-auto flex flex-col gap-6">
 
-                {/* ── Page Header ── */}
+                {/* Header */}
                 <div className="flex items-center gap-3">
                     <FaUserCircle className="text-[#D4AF37] text-3xl" />
                     <div>
@@ -103,11 +101,11 @@ export default function ClientProfile() {
                     </div>
                 </div>
 
-                {/* ── Personal Information ── */}
+                {/* Personal Information */}
                 <div className="bg-white rounded-2xl shadow p-8">
                     <h2 className="text-lg font-bold text-[#0F172A] mb-5">Personal Information</h2>
 
-                    {/* Avatar circle with initial */}
+                    {/* Avatar */}
                     <div className="flex items-center gap-4 mb-6">
                         <div className="w-16 h-16 rounded-full bg-[#0F172A] flex items-center justify-center text-white text-2xl font-bold">
                             {profile.name ? profile.name[0].toUpperCase() : "C"}
@@ -135,22 +133,19 @@ export default function ClientProfile() {
                             Save Changes
                         </button>
                         {saved && (
-                            <p className="text-green-600 text-sm font-medium">
-                                ✓ Profile updated!
-                            </p>
+                            <p className="text-green-600 text-sm font-medium">✓ Profile updated!</p>
                         )}
                     </div>
                 </div>
 
-                {/* ── Change Password ── */}
+                {/* Change Password */}
                 <div className="bg-white rounded-2xl shadow p-8">
                     <h2 className="text-lg font-bold text-[#0F172A] mb-5">Change Password</h2>
 
                     <div className="flex flex-col gap-4">
+
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Current Password
-                            </label>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Current Password</label>
                             <input
                                 type="password"
                                 value={pwForm.current}
@@ -159,10 +154,9 @@ export default function ClientProfile() {
                                 className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#D4AF37] transition"
                             />
                         </div>
+
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">
-                                New Password
-                            </label>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">New Password</label>
                             <input
                                 type="password"
                                 value={pwForm.newPw}
@@ -171,10 +165,9 @@ export default function ClientProfile() {
                                 className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#D4AF37] transition"
                             />
                         </div>
+
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Confirm New Password
-                            </label>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Confirm New Password</label>
                             <input
                                 type="password"
                                 value={pwForm.confirm}

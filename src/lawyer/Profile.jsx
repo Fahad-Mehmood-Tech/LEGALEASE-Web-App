@@ -1,20 +1,16 @@
 // src/lawyer/Profile.jsx
-// Lawyer can view and edit their own profile details
-// Data is saved to localStorage so it persists across sessions
 
 import { useState, useEffect } from "react";
-import { getCurrentUser, saveCurrentUser } from "../utils/localStorage";
+import { getUser, saveUser } from "../utils/localStorage";
 import { FaUserEdit, FaSave } from "react-icons/fa";
 
-// ── Practice area options ──────────────────────────────────────────
 const PRACTICE_AREAS = [
     "Family Law", "Criminal Law", "Corporate Law",
     "Property Law", "Tax Law", "Immigration Law",
     "Civil Law", "Labour Law",
 ];
 
-// ── Reusable labeled input ─────────────────────────────────────────
-// Must be defined OUTSIDE the component to avoid re-mount on every render
+// Field component — OUTSIDE parent component (focus loss se bachne ke liye)
 function Field({ label, name, value, onChange, type = "text", placeholder = "" }) {
     return (
         <div>
@@ -32,6 +28,7 @@ function Field({ label, name, value, onChange, type = "text", placeholder = "" }
 }
 
 export default function LawyerProfile() {
+
     const [profile, setProfile] = useState({
         name: "",
         email: "",
@@ -45,13 +42,12 @@ export default function LawyerProfile() {
         officeAddress: "",
     });
 
-    const [saved, setSaved] = useState(false); // show success message after save
+    const [saved, setSaved] = useState(false);
 
-    // ── Load current user data on mount ───────────────────────────
+    // Page khulte hi localStorage se data load karo
     useEffect(() => {
-        const user = getCurrentUser();
+        const user = getUser(); // ✅ sahi function
         if (user) {
-            // Pre-fill form with existing data; fallback to "" for missing fields
             setProfile({
                 name: user.name || "",
                 email: user.email || "",
@@ -67,17 +63,17 @@ export default function LawyerProfile() {
         }
     }, []);
 
-    // ── Update a field in state ────────────────────────────────────
+    // Koi bhi field change ho toh state update karo
     function handleChange(e) {
         setProfile({ ...profile, [e.target.name]: e.target.value });
-        setSaved(false); // hide success message when user starts editing again
+        setSaved(false);
     }
 
-    // ── Save profile to localStorage ──────────────────────────────
+    // Save button dabane pe localStorage mein save karo
     function handleSave() {
-        const existing = getCurrentUser();
-        const updated = { ...existing, ...profile }; // merge new data with existing
-        saveCurrentUser(updated);
+        const existing = getUser(); // ✅ sahi function
+        const updated = { ...existing, ...profile };
+        saveUser(updated); // ✅ sahi function
         setSaved(true);
     }
 
@@ -85,7 +81,7 @@ export default function LawyerProfile() {
         <div className="min-h-screen bg-[#F8FAFC] p-6">
             <div className="max-w-3xl mx-auto">
 
-                {/* ── Header ── */}
+                {/* Header */}
                 <div className="mb-8 flex items-center gap-3">
                     <FaUserEdit className="text-[#D4AF37] text-3xl" />
                     <div>
@@ -98,7 +94,7 @@ export default function LawyerProfile() {
 
                 <div className="bg-white rounded-2xl shadow p-8 flex flex-col gap-5">
 
-                    {/* Avatar placeholder */}
+                    {/* Avatar */}
                     <div className="flex items-center gap-4 mb-2">
                         <div className="w-16 h-16 rounded-full bg-[#0F172A] flex items-center justify-center text-white text-xl font-bold">
                             {profile.name ? profile.name[0].toUpperCase() : "L"}
@@ -109,19 +105,19 @@ export default function LawyerProfile() {
                         </div>
                     </div>
 
-                    {/* ── Form Fields ── */}
+                    {/* Form Fields */}
                     <div className="grid md:grid-cols-2 gap-5">
                         <Field label="Full Name" name="name" value={profile.name} onChange={handleChange} placeholder="e.g. Ahmed Raza" />
                         <Field label="Email Address" name="email" value={profile.email} onChange={handleChange} type="email" placeholder="email@example.com" />
                         <Field label="Phone Number" name="phone" value={profile.phone} onChange={handleChange} placeholder="+92 300 0000000" />
                         <Field label="City" name="city" value={profile.city} onChange={handleChange} placeholder="e.g. Lahore" />
-                        <Field label="Experience (years)" name="experience" value={profile.experience} onChange={handleChange} placeholder="e.g. 8" type="number" />
-                        <Field label="Consultation Fee (PKR)" name="fee" value={profile.fee} onChange={handleChange} placeholder="e.g. 3000" type="number" />
+                        <Field label="Experience (years)" name="experience" value={profile.experience} onChange={handleChange} type="number" placeholder="e.g. 8" />
+                        <Field label="Consultation Fee (PKR)" name="fee" value={profile.fee} onChange={handleChange} type="number" placeholder="e.g. 3000" />
                         <Field label="Languages Spoken" name="languages" value={profile.languages} onChange={handleChange} placeholder="e.g. Urdu, English" />
                         <Field label="Office Address" name="officeAddress" value={profile.officeAddress} onChange={handleChange} placeholder="Full office address" />
                     </div>
 
-                    {/* Specialization dropdown */}
+                    {/* Specialization Dropdown */}
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
                             Specialization
@@ -139,7 +135,7 @@ export default function LawyerProfile() {
                         </select>
                     </div>
 
-                    {/* Bio textarea */}
+                    {/* Bio */}
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
                             Biography
@@ -154,7 +150,7 @@ export default function LawyerProfile() {
                         />
                     </div>
 
-                    {/* Save button + success message */}
+                    {/* Save Button */}
                     <div className="flex items-center gap-4">
                         <button
                             onClick={handleSave}
